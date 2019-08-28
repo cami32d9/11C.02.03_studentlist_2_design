@@ -1,0 +1,47 @@
+html {
+  background-color: #fbfbfb;
+  font-family: sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+ul {
+  margin: 50px;
+  padding: 0;
+  width: fit-content;
+}
+
+li {
+  list-style: none;
+  margin: 0;
+  padding: 10px 200px 10px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.Hufflepuff {
+  background-color: #978f22d0;
+}
+
+.Gryffindor {
+  background-color: rgba(139, 0, 0, 0.8);
+}
+
+.Ravenclaw {
+  background-color: rgba(0, 0, 139, 0.8);
+}
+
+.Slytherin {
+  background-color: rgba(0, 100, 0, 0.8);
+}

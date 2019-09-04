@@ -68,15 +68,15 @@ function insertStudentList() {
   });
 }
 
-function getFilteredStudents(filterBy, sortBy) {
+function getFilteredStudents(filterBy) {
   filteredStudents = students.filter(
     student => filterBy === "all" || student.house === filterBy
   );
 
   console.log("I'm sorting by " + sortBy);
   filteredStudents.sort(function(a, b) {
-    var nameA = a.lastname.toUpperCase(); // ignore upper and lowercase
-    var nameB = b.lastname.toUpperCase(); // ignore upper and lowercase
+    var nameA = a[sortBy].toUpperCase(); // ignore upper and lowercase
+    var nameB = b[sortBy].toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
       return -1;
     }

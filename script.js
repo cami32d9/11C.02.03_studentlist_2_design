@@ -22,7 +22,7 @@ function start() {
   filterButtons.forEach(button => {
     button.addEventListener("click", function() {
       filterBy = this.getAttribute("data-type");
-      getFilteredStudents(filterBy);
+      getFilteredStudents(filterBy, sortBy);
       document.querySelectorAll("button").forEach(button => {
         button.classList.remove("button_chosen");
         this.classList.add("button_chosen");
@@ -35,7 +35,7 @@ function start() {
       console.log("Clicking");
       sortBy = this.getAttribute("data-type");
       console.log("Sort by:" + sortBy);
-      getFilteredStudents(filterBy);
+      getFilteredStudents(filterBy, sortBy);
       document.querySelectorAll("button").forEach(button => {
         button.classList.remove("button_chosen");
         this.classList.add("button_chosen");
@@ -68,7 +68,7 @@ function insertStudentList() {
   });
 }
 
-function getFilteredStudents(filterBy) {
+function getFilteredStudents(filterBy, sortBy) {
   filteredStudents = students.filter(
     student => filterBy === "all" || student.house === filterBy
   );

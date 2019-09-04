@@ -1,32 +1,44 @@
-// ----- INSERT STUDENTS IN LIST -----
+// ----- PLANNING ----- //
+/* 
 
-let firstname;
-let lastname;
+-- FILES
+index.html
+script.js
+style.css
+students1991.json
 
-destStudentList = document.querySelector("#student_list");
+-- VARIABLES
+fullName
+firstName
+lastName
+house
 
-async function getStudentList() {
-  let pagesUrl = "students1991.json";
-  let jsonData = await fetch(pagesUrl);
-  section = await jsonData.json();
-  insertStudentList();
-}
+-- STUDENT LIST MUST INCLUDE (INFORMATION)
+<li class="student ${house}" data-firstname="${firstname}" data-lastname="${lastname}" data-house="${house}">
+- <h2>Full name</h2>
+- <h3>House</h3>
+- <img>Photo of student</img>
+- <img>Crest</img>
+</li>
 
-function insertStudentList() {
-  section.forEach(section => {
-    let nameArray = `${section.fullname}`.split(" ");
 
-    let template = `
-                <li class="student ${section.house}" data-firstname="${
-      nameArray[0]
-    }" data-lastname="${nameArray[1]}" data-house="${section.house}">
-                        <h2 class="name">${section.fullname}</h2>
-                        <p class="house">${section.house}</p>
-                </li>
-                `;
+-- MODAL WINDOW MUST INCLUDE
+<div class="hide_list">Makes student list inactive</div>
+<div class="modal" style="Styled by house">Contains all student information</div>
+<button>Close window-button</button>
 
-    destStudentList.insertAdjacentHTML("beforeend", template);
-  });
-}
 
-getStudentList();
+-- FUNCTIONS
+----- ✓ YES, I know how to make it
+----- ~ YEAH, I think I know how to make it
+----- | NAH, I might know how to make it
+----- ÷ NO, I don't know how to make it
+
+✓ Load JSON
+✓ Split first- and last name
+✓ Insert studentList
+~ Sort by X
+÷ Filter by X
+~ Open studentModal
+
+*/

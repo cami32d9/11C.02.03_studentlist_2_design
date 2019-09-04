@@ -113,13 +113,9 @@ function insertStudentList() {
 
     destStudentList.insertAdjacentHTML("beforeend", template);
 
-    /* Click events for each student:
-        Open popup when clicking on student in student list,
-        Close popup when clicking outside modal window,
-        Close popup when clicking on the "close icon" in modal window. */
+    /* Click event for each student:
+        Open popup when clicking on student in student list*/
     destStudentList.lastElementChild.addEventListener("click", openPopup);
-    popupDim.addEventListener("click", closePopup);
-    document.querySelector(".close").addEventListener("click", closePopup);
 
     function openPopup() {
       /* Adds student info to the modal window */
@@ -152,6 +148,10 @@ function insertStudentList() {
 
       /* Styles modal window with student house color. */
       popup.style.backgroundColor = `var(--${student.house}-color`;
+
+      /* Close popup when clicking outside modal window or the "close icon" in modal window. */
+      popupDim.addEventListener("click", closePopup);
+      document.querySelector(".close").addEventListener("click", closePopup);
     }
   });
 }

@@ -1,19 +1,21 @@
 :root {
-  --Hufflepuff-color: #978f22;
+  --Hufflepuff-color: #bb9e3f;
   --Ravenclaw-color: rgba(0, 0, 139, 1);
   --Slytherin-color: rgba(0, 100, 0, 1);
   --Gryffindor-color: rgba(139, 0, 0, 1);
 }
 
 html {
-  background-color: #fbfbfb;
+  background-color: #e2dac7;
   font-family: sans-serif;
   color: rgb(255, 255, 255);
 }
 
 body {
-  margin: 0;
-  padding: 0;
+  background-color: rgb(255, 248, 242);
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 100px 10%;
 }
 
 h2 {
@@ -25,15 +27,13 @@ p {
 }
 
 ul {
-  margin: 50px;
   padding: 0;
-  width: fit-content;
 }
 
 li {
   list-style: none;
   margin: 0;
-  padding: 10px 200px 10px 10px;
+  padding: 10px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.2);
 }
 
@@ -69,6 +69,7 @@ li {
   padding: 40px 30px 30px 30px;
   max-width: 800px;
   margin: 0 auto;
+  text-align: center;
 }
 
 .popup_dim {
@@ -106,4 +107,13 @@ li {
 
 .crest {
   max-width: 300px;
+  margin-top: 30px;
+}
+
+.popup_grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  text-align: left;
 }

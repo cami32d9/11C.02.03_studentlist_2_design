@@ -24,9 +24,9 @@ function start() {
 }
 
 function sortStudents() {
-  students.sort(function(a, b) {
-    var nameA = a.fullname.toUpperCase(); // ignore upper and lowercase
-    var nameB = b.fullname.toUpperCase(); // ignore upper and lowercase
+  filteredStudents.sort(function(a, b) {
+    var nameA = a.lastname.toUpperCase(); // ignore upper and lowercase
+    var nameB = b.lastname.toUpperCase(); // ignore upper and lowercase
     if (nameA < nameB) {
       return -1;
     }
@@ -49,8 +49,6 @@ async function getStudentList() {
 function insertStudentList(filterBy) {
   destStudentList.innerHTML = "";
 
-  sortStudents();
-
   filteredStudents = students.filter(
     student => filterBy === "all" || student.house === filterBy
   );
@@ -60,11 +58,14 @@ function insertStudentList(filterBy) {
 
     student.firstname = nameArray[0];
     student.lastname = nameArray[1];
+  });
 
+  sortStudents();
+  console.log(filteredStudents);
+
+  filteredStudents.forEach(student => {
     let template = `
-                <li class="student ${student.house}" data-firstname="${
-      nameArray[0]
-    }" data-lastname="${nameArray[1]}" data-house="${student.house}">
+                <li class="student ${student.house}" data-firstname="${student.firstname}" data-lastname="${student.lastname}" data-house="${student.house}">
                         <h2 class="name">${student.fullname}</h2>
                         <p class="house">${student.house}</p>
                 </li>

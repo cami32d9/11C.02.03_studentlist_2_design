@@ -1,3 +1,10 @@
+:root {
+  --Hufflepuff-color: #978f22;
+  --Ravenclaw-color: rgba(0, 0, 139, 1);
+  --Slytherin-color: rgba(0, 100, 0, 1);
+  --Gryffindor-color: rgba(139, 0, 0, 1);
+}
+
 html {
   background-color: #fbfbfb;
   font-family: sans-serif;
@@ -44,4 +51,59 @@ li {
 
 .Slytherin {
   background-color: rgba(0, 100, 0, 0.8);
+}
+
+/* ----- POP-UP ----- */
+.popup {
+  position: fixed;
+  top: 5vh;
+  left: 5vw;
+  width: 90vw;
+  max-height: 90vh;
+  background-color: #cfd000;
+  overflow-y: scroll;
+  display: none;
+}
+
+.popup_info {
+  padding: 40px 30px 30px 30px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.popup_dim {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+  opacity: 0.7;
+  display: none;
+}
+
+.close img {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.close img:hover {
+  position: absolute;
+  right: 7px;
+  top: 7px;
+  width: 26px;
+  height: 26px;
+  opacity: 1;
+}
+
+.student_photo {
+  max-width: 100%;
+}
+
+.crest {
+  max-width: 300px;
 }
